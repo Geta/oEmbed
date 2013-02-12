@@ -26,10 +26,10 @@ You need an API key from [embed.ly] (http://embed.ly) to use oEmbed. There's a f
 
 in Web.config:
 ```xml
-    <configSections>
-        <section name=""oEmbedSettings"" type=""Geta.oEmbed.Configuration.oEmbedSettings, Geta.oEmbed""/>
-     </configSections>
-     <oEmbedSettings apikey=""your-key-here"" />
+<configSections>
+    <section name="oEmbedSettings" type="Geta.oEmbed.Configuration.oEmbedSettings, Geta.oEmbed"/>
+</configSections>
+<oEmbedSettings apikey="your-key-here" />
 ```
 
 For an introduction see: [Introducing oEmbed for EPiServer] (http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [Geta.oEmbed version 1.2 is out] (http://www.frederikvig.com/2011/11/geta-oembed-version-1-2-is-out/).
