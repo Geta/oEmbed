@@ -22,4 +22,14 @@ In order to use secured protocol you need to enable it in oEmbed settings by add
 
 You can install the latest using NuGet from [nuget.episerver.com] (http://nuget.episerver.com).
 
+You need an API key from [embed.ly] (http://embed.ly) to use oEmbed. There's a free plan supported that supports upto 10 000 URLs each month (as well as paid plans with more options and support).
+
+in Web.config:
+```xml
+    <configSections>
+        <section name=""oEmbedSettings"" type=""Geta.oEmbed.Configuration.oEmbedSettings, Geta.oEmbed""/>
+     </configSections>
+     <oEmbedSettings apikey=""your-key-here"" />
+```
+
 For an introduction see: [Introducing oEmbed for EPiServer] (http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [Geta.oEmbed version 1.2 is out] (http://www.frederikvig.com/2011/11/geta-oembed-version-1-2-is-out/).
