@@ -1,4 +1,4 @@
-﻿<episerver xmlns="http://EPiServer.Configuration.EPiServerSection">
+﻿<episerver>
     <dynamicContent>
 		<controls>
 			<add description="Displays an oEmbed object on the page" name="oEmbedPlugin" type="Geta.oEmbed.DynamicContent.oEmbedPlugin, Geta.oEmbed" />

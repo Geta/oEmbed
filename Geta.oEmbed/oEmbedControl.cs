@@ -62,6 +62,12 @@ namespace Geta.oEmbed
             {
                 endpoint = UriSupport.AddQueryString(endpoint, "maxheight", this.Options.MaxHeight.ToString(CultureInfo.InvariantCulture));
             }
+            var wmode = this.Options.Wmode.ToString();
+            if (!string.IsNullOrEmpty(wmode))
+            {
+                endpoint = UriSupport.AddQueryString(endpoint, "wmode", wmode);
+            }
+
 
             endpoint = UriSupport.AddQueryString(endpoint, "url", this.Options.Url);
 
