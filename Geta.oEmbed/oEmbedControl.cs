@@ -10,7 +10,7 @@ namespace Geta.oEmbed
     {
         public oEmbedOptions Options { get; set; }
 
-        protected override void Render(HtmlTextWriter writer)
+        public void Write(HtmlTextWriter writer)
         {
             if (Options == null || string.IsNullOrEmpty(Options.Url))
             {
@@ -48,6 +48,11 @@ namespace Geta.oEmbed
 
                 writer.Write(result);
             }
+        }
+
+        protected override void Render(HtmlTextWriter writer)
+        {
+            Write(writer);
         }
 
         private string BuildUrl()
