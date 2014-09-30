@@ -66,6 +66,7 @@
     <Compile Include="CustomProperty\PropertyoEmbedControl.cs" />
     <Compile Include="DynamicContent\oEmbedPlugin.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="oEmbedApi.cs" />
     <Compile Include="oEmbedControl.cs" />
     <Compile Include="oEmbedOptions.cs" />
     <Compile Include="oEmbedResponse.cs" />

@@ -1,6 +1,4 @@
-﻿using System.IO;
-using System.Web.Mvc;
-using System.Web.UI;
+﻿using System.Web.Mvc;
 
 namespace Geta.oEmbed.Extensions
 {
@@ -9,13 +7,13 @@ namespace Geta.oEmbed.Extensions
         // ReSharper disable once InconsistentNaming
         public static MvcHtmlString oEmbed(this HtmlHelper html, oEmbedOptions oEmbedOptions)
         {
-            var stringWriter = new StringWriter();
-            var oEmbedControl = new oEmbedControl
-            {
-                Options = oEmbedOptions
-            };
-            oEmbedControl.Write(new HtmlTextWriter(stringWriter));
-            return new MvcHtmlString(stringWriter.ToString());
+            var oEmbedResponse = oEmbedApi.Call(oEmbedOptions);
+
+            var markup = string.Empty;
+            if (oEmbedResponse != null)
+                markup = oEmbedResponse.RenderMarkup();
+
+            return new MvcHtmlString(markup);
         }
     }
 }
