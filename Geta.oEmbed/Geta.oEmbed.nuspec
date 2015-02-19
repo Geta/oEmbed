@@ -8,7 +8,8 @@
     <projectUrl>https://github.com/Geta/oEmbed</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <tags>EPiServer7</tags>
+    <tags>EPiServer YouTube Vimeo Flickr Embed</tags>
+    <iconUrl>http://cdn.geta.no/opensource/icons/geta-embed-icon.png</iconUrl>
   </metadata>
   <files>
 	<file src="episerver.config.transform" target="content" />
