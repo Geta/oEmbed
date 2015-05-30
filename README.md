@@ -1,22 +1,35 @@
 oEmbed
 ======
 
-The latest version 1.4 is compiled for .NET 4 and EPiServer 7. It will use the legacy editor to render the property in edit mode. To add oEmbed as a new property to your page types you need to use the UIHint attribute like in this example:
+Version 2 and newer is compiled for .NET 4.5 and EPiServer 8. 
+
 ```csharp
-[UIHint("oEmbed object")]
-[BackingType(typeof(PropertyoEmbed))]
-public virtual oEmbedOptions Embed { get; set; }
+Install-Package Geta.oEmbed
 ```
 
-To use the dynamic content plugin, you need to register it in your sites episerver.config file 
-```xml
-<dynamicContent>
-	<controls>
-		...
-		<add description="Displays an oEmbed object on the page" name="oEmbedPlugin" type="Geta.oEmbed.DynamicContent.oEmbedPlugin, Geta.oEmbed" />
-	</controls>
-</dynamicContent>
+After the package is installed you'll have to register a free account on embed.ly to get an API key. In your web.config you should at the bottom see <oEmbedSettings apikey="your-key-here" />. Replace your-key-here with the API key from embed.ly.
+
+Add oEmbedBlock to one of your content types:
+
+```csharp
+public virtual oEmbedBlock EmbedBlock { get; set; }
 ```
+
+And in your view:
+
+```csharp
+@Html.PropertyFor(m => m.CurrentPage.EmbedBlock)
+```
+
+There's also a HTML helper method you can use:
+
+```csharp
+@Html.oEmbed(Model.CurrentPage.EmbedBlock)
+```
+
+That's it! Build and run your site. You'll now be able to embed any content from the supported 300 providers.
+
+
 HTTPS support:
 In order to use secured protocol you need to enable it in oEmbed settings by adding secure="true" key. Only payed embed.ly plans support SSL, otherwise you will have HTTP Status: 400 error.
 
@@ -32,4 +45,4 @@ in Web.config:
 <oEmbedSettings apikey="your-key-here" />
 ```
 
-For an introduction see: [Introducing oEmbed for EPiServer] (http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [Geta.oEmbed version 1.2 is out] (http://www.frederikvig.com/2011/11/geta-oembed-version-1-2-is-out/).
+For an introduction see: [Introducing oEmbed for EPiServer] (http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [New version of Geta oEmbed] (http://geta.no/blogg/new-version-of-geta-oembed/).
