@@ -7,7 +7,7 @@ Version 2 and newer is compiled for .NET 4.5 and EPiServer 8.
 Install-Package Geta.oEmbed
 ```
 
-After the package is installed you'll have to register a free account on embed.ly to get an API key. In your web.config you should at the bottom see <oEmbedSettings apikey="your-key-here" />. Replace your-key-here with the API key from embed.ly.
+After the package is installed you'll have to register a free account on embed.ly to get an API key. In your web.config you should at the bottom see &lt;oEmbedSettings apikey="your-key-here" /&gt;. Replace your-key-here with the API key from embed.ly.
 
 Add oEmbedBlock to one of your content types:
 
