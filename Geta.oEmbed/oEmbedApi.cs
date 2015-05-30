@@ -2,12 +2,23 @@
 using EPiServer;
 using System.Globalization;
 using System.Web.Script.Serialization;
+using Geta.oEmbed.Block;
 
 namespace Geta.oEmbed
 {
     // ReSharper disable once InconsistentNaming
     public static class oEmbedApi
     {
+        public static oEmbedResponse Call(oEmbedBlock options)
+        {
+            return Call(new oEmbedOptions
+            {
+                Url = options.Url,
+                MaxHeight = options.MaxHeight,
+                MaxWidth = options.MaxWidth
+            });
+        }
+
         public static oEmbedResponse Call(oEmbedOptions options)
         {
             if (options == null
