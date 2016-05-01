@@ -1,5 +1,7 @@
-oEmbed
-======
+# oEmbed
+
+![](http://tc.geta.no/app/rest/builds/buildType:(id:TeamFrederik_OEmbed_OEmbedBuildAndPublishNuGetPackage)/statusIcon)
+
 
 Version 2 and newer is compiled for .NET 4.5 and EPiServer 8. 
 
