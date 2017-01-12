@@ -7,7 +7,7 @@ using EPiServer.DynamicContent;
 
 namespace Geta.oEmbed.DynamicContent
 {
-    public class oEmbedPlugin : IDynamicContent
+    public class oEmbedPlugin : IDynamicContentBase
     {
         protected PropertyString url;
         protected PropertyNumber width;
