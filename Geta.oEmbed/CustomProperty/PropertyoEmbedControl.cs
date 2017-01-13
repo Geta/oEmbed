@@ -52,9 +52,9 @@ namespace Geta.oEmbed.CustomProperty
             ((IPropertyControl)propertyWidthControl.Controls[0]).ApplyChanges();
             ((IPropertyControl)propertyHeightControl.Controls[0]).ApplyChanges();
 
-            data.Url = propertyUrlControl.PropertyValue as string;
-            data.MaxWidth = Convert.ToInt32(propertyWidthControl.PropertyValue);
-            data.MaxHeight = Convert.ToInt32(propertyHeightControl.PropertyValue);
+            data.Url = propertyUrlControl.InnerProperty.Value as string;
+            data.MaxWidth = Convert.ToInt32(propertyWidthControl.InnerProperty.Value);
+            data.MaxHeight = Convert.ToInt32(propertyHeightControl.InnerProperty.Value);
 
             base.SetValue(data);
         }
