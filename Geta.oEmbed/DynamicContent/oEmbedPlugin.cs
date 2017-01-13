@@ -7,8 +7,8 @@ using EPiServer.DynamicContent;
 
 namespace Geta.oEmbed.DynamicContent
 {
-    public class oEmbedPlugin : IDynamicContent
-    {
+    public class oEmbedPlugin : IDynamicContentControl
+	{
         protected PropertyString url;
         protected PropertyNumber width;
         protected PropertyNumber height;
@@ -25,7 +25,7 @@ namespace Geta.oEmbed.DynamicContent
             throw new NotImplementedException();
         }
 
-        public Control GetControl(PageBase hostPage)
+        public Control GetControl(TemplateControl hostPage)
         {
             var oEmbedControl = new oEmbedControl();
 
@@ -81,5 +81,5 @@ namespace Geta.oEmbed.DynamicContent
                 return new PropertyDataCollection { url, width, height };
             }
         }
-    }
+	}
 }
