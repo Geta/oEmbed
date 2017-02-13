@@ -1,9 +1,8 @@
 # oEmbed
 
 ![](http://tc.geta.no/app/rest/builds/buildType:(id:TeamFrederik_OEmbed_OEmbedBuildAndPublishNuGetPackage)/statusIcon)
-
-
-Version 2 and newer is compiled for .NET 4.5 and EPiServer 8. 
+[![Platform](https://img.shields.io/badge/Platform-.NET 4.5-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
+[![Platform](https://img.shields.io/badge/Episerver-%2010-orange.svg?style=flat)](http://world.episerver.com/cms/) 
 
 ```csharp
 Install-Package Geta.oEmbed
