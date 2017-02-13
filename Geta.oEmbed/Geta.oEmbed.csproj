@@ -86,20 +86,12 @@
       <HintPath>..\packages\EPiServer.CMS.Core.10.0.1\lib\net45\EPiServer.LinkAnalyzer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Logging.Log4Net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Logging.Log4Net.2.1.0\lib\net45\EPiServer.Logging.Log4Net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="EPiServer.Web.WebControls, Version=10.0.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.CMS.Core.10.0.1\lib\net45\EPiServer.Web.WebControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EPiServer.XForms, Version=10.0.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.CMS.Core.10.0.1\lib\net45\EPiServer.XForms.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
