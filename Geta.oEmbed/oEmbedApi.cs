@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using EPiServer;
 using System.Globalization;
+using System.Web;
 using System.Web.Script.Serialization;
 using Geta.oEmbed.Block;
 
@@ -58,7 +59,11 @@ namespace Geta.oEmbed
             if (options.MaxHeight > 0)
                 endpoint = UriSupport.AddQueryString(endpoint, "maxheight", options.MaxHeight.ToString(CultureInfo.InvariantCulture));
 
-            endpoint = UriSupport.AddQueryString(endpoint, "url", options.Url);
+            if (!string.IsNullOrEmpty(options.Url))
+            {
+                // First decode the URL in case the editor already inserted an encoded URL.
+                endpoint = UriSupport.AddQueryString(endpoint, "url", HttpUtility.UrlEncode(HttpUtility.UrlDecode(options.Url)));
+            }
 
             if (Configuration.oEmbedSettings.Settings == null
                 || string.IsNullOrEmpty(Configuration.oEmbedSettings.Settings.ApiKey))
