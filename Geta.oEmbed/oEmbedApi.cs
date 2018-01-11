@@ -4,6 +4,8 @@ using System.Globalization;
 using System.Web;
 using System.Web.Script.Serialization;
 using Geta.oEmbed.Block;
+using EPiServer.ServiceLocation;
+using EPiServer.Framework.Cache;
 
 namespace Geta.oEmbed
 {
@@ -22,8 +24,7 @@ namespace Geta.oEmbed
 
         public static oEmbedResponse Call(oEmbedOptions options)
         {
-            if (options == null
-                || string.IsNullOrEmpty(options.Url))
+            if (options == null || string.IsNullOrEmpty(options.Url))
             {
                 return null;
             }
@@ -33,6 +34,18 @@ namespace Geta.oEmbed
             var jsonResponse = string.Empty;
             var endpoint = BuildUrl(options);
 
+            string cacheKey = "oembed-" + endpoint;
+
+            var _cache = ServiceLocator.Current.GetInstance<ISynchronizedObjectInstanceCache>();
+
+            if (!Configuration.oEmbedSettings.Settings.DisableCache)
+            {
+                if (_cache.Get(cacheKey) != null)
+                {
+                    return _cache.Get<oEmbedResponse>(cacheKey, ReadStrategy.Immediate);
+                }
+            }
+
             try
             {
                 jsonResponse = new System.Net.WebClient().DownloadString(endpoint);
@@ -40,11 +53,20 @@ namespace Geta.oEmbed
             catch (System.Net.WebException exception)
             {
                 if (exception.Status != System.Net.WebExceptionStatus.ProtocolError)
+                {
                     throw;
+                }
             }
 
             if (!string.IsNullOrEmpty(jsonResponse))
+            {
                 oEmbedResponse = new JavaScriptSerializer().Deserialize<oEmbedResponse>(jsonResponse);
+            }
+
+            if (!Configuration.oEmbedSettings.Settings.DisableCache)
+            {
+                _cache.Insert(cacheKey, oEmbedResponse, CacheEvictionPolicy.Empty);
+            }
 
             return oEmbedResponse;
         }

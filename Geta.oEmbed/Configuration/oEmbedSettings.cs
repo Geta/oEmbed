@@ -17,6 +17,15 @@ namespace Geta.oEmbed.Configuration
 
         }
 
+        [ConfigurationProperty("disableCache", IsRequired = false)]
+        public bool DisableCache
+        {
+            get { return (bool)this["disableCache"]; }
+
+            set { this["disableCache"] = value; }
+
+        }
+
         [ConfigurationProperty("apikey", IsRequired = true)]
         public string ApiKey
         {

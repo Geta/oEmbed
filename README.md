@@ -47,3 +47,7 @@ in Web.config:
 ```
 
 For an introduction see: [Introducing oEmbed for EPiServer] (http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [New version of Geta oEmbed] (http://geta.no/blogg/new-version-of-geta-oembed/).
+
+### Cache
+
+By default we cache the response the with a dependency on Episerver. You can disable it in web.config configuration using: DisableCache=true.
