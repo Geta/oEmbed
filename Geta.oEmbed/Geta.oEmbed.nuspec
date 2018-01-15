@@ -12,7 +12,6 @@
     <iconUrl>http://cdn.geta.no/opensource/icons/geta-embed-icon.png</iconUrl>
   </metadata>
   <files>
-	<file src="episerver.config.transform" target="content" />
 	<file src="web.config.transform" target="content" />
 	<file src="Views/Shared/DisplayTemplates/oEmbedBlock.cshtml" target="content/Views/Shared/DisplayTemplates/oEmbedBlock.cshtml" />
   </files>

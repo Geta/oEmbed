@@ -174,7 +174,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="Geta.oEmbed.nuspec" />
     <None Include="packages.config" />
     <None Include="Views\Shared\DisplayTemplates\oEmbedBlock.cshtml" />
   </ItemGroup>
