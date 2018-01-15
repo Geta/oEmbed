@@ -51,3 +51,10 @@ For an introduction see: [Introducing oEmbed for EPiServer](http://www.frederikv
 ### Cache
 
 By default we cache the response the with a dependency on Episerver. You can disable it in web.config configuration using: DisableCache=true.
+
+## Changelog
+
+3.0.1.
+  1. Added support for Episerver 11
+  2. Removed old dynamic content support
+  3. Removed legacy custom property
