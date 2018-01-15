@@ -1,8 +1,8 @@
 # oEmbed
 
 ![](http://tc.geta.no/app/rest/builds/buildType:(id:TeamFrederik_OEmbed_OEmbedBuildAndPublishNuGetPackage)/statusIcon)
-[![Platform](https://img.shields.io/badge/Platform-.NET%204.5.2-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
-[![Platform](https://img.shields.io/badge/Episerver-%2010-orange.svg?style=flat)](http://world.episerver.com/cms/) 
+[![Platform](https://img.shields.io/badge/Platform-.NET%204.6.1-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
+[![Platform](https://img.shields.io/badge/Episerver-%2011-orange.svg?style=flat)](http://world.episerver.com/cms/) 
 
 ```csharp
 Install-Package Geta.oEmbed
@@ -34,9 +34,9 @@ That's it! Build and run your site. You'll now be able to embed any content from
 HTTPS support:
 In order to use secured protocol you need to enable it in oEmbed settings by adding secure="true" key. Only payed embed.ly plans support SSL, otherwise you will have HTTP Status: 400 error.
 
-You can install the latest using NuGet from [nuget.episerver.com] (http://nuget.episerver.com).
+You can install the latest using NuGet from [nuget.episerver.com](http://nuget.episerver.com).
 
-You need an API key from [embed.ly] (http://embed.ly) to use oEmbed. There's a free plan supported that supports upto 10 000 URLs each month (as well as paid plans with more options and support).
+You need an API key from [embed.ly](http://embed.ly) to use oEmbed. There's a free plan supported that supports upto 10 000 URLs each month (as well as paid plans with more options and support).
 
 in Web.config:
 ```xml
@@ -46,7 +46,7 @@ in Web.config:
 <oEmbedSettings apikey="your-key-here" />
 ```
 
-For an introduction see: [Introducing oEmbed for EPiServer] (http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [New version of Geta oEmbed] (http://geta.no/blogg/new-version-of-geta-oembed/).
+For an introduction see: [Introducing oEmbed for EPiServer](http://www.frederikvig.com/2010/09/introducing-oembed-for-episerver/) and [New version of Geta oEmbed](http://geta.no/blogg/new-version-of-geta-oembed/).
 
 ### Cache
 
