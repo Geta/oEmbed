@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using EPiServer;
 using System.Globalization;
+using System.Net;
 using System.Web;
 using System.Web.Script.Serialization;
 using Geta.oEmbed.Block;
@@ -50,11 +51,19 @@ namespace Geta.oEmbed
             {
                 jsonResponse = new System.Net.WebClient().DownloadString(endpoint);
             }
-            catch (System.Net.WebException exception)
+            catch (WebException exception)
             {
                 if (exception.Status != System.Net.WebExceptionStatus.ProtocolError)
                 {
                     throw;
+                }
+                else
+                {
+                    var response = exception.Response as HttpWebResponse;
+                    if (response != null && response.StatusCode == HttpStatusCode.Forbidden)
+                    {
+                        throw new ConfigurationErrorsException(@"oEmbedSettings apikey is invalid", exception);
+                    }
                 }
             }
 
