@@ -4,6 +4,14 @@
 [![Platform](https://img.shields.io/badge/Platform-.NET%204.6.1-blue.svg?style=flat)](https://msdn.microsoft.com/en-us/library/w0x726c2%28v=vs.110%29.aspx)
 [![Platform](https://img.shields.io/badge/Episerver-%2011-orange.svg?style=flat)](http://world.episerver.com/cms/) 
 
+## Description
+EPiServer integration with bit.ly. This package contains an oEmbed block (properties: URL, max width, max height) plus view. An API key from bit.ly is mandatory to use this package.
+
+## Features
+* Configuration section in web.config
+* oEmbed block (URL, max width, max height) + view
+* oEmbedApi class to call APi
+
 ```csharp
 Install-Package Geta.oEmbed
 ```
@@ -51,6 +59,9 @@ For an introduction see: [Introducing oEmbed for EPiServer](http://www.frederikv
 ### Cache
 
 By default we cache the response the with a dependency on Episerver. You can disable it in web.config configuration using: DisableCache=true.
+
+## Package maintainer
+https://github.com/patkleef
 
 ## Changelog
 
