@@ -61,7 +61,7 @@ For an introduction see: [Introducing oEmbed for EPiServer](http://www.frederikv
 By default we cache the response the with a dependency on Episerver. You can disable it in web.config configuration using: DisableCache=true.
 
 ## Package maintainer
-https://github.com/chipev
+https://github.com/m-kovacina
 
 ## Changelog
 
