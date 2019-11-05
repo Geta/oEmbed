@@ -5,7 +5,7 @@
     <DockerTargetOS>Windows</DockerTargetOS>
     <ProjectGuid>d842d1d1-8538-49be-aade-a391df29bffc</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>http://oembed.getalocaltest.me</DockerServiceUrl>
+    <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
     <DockerServiceName>geta-oembed-sample-web</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
