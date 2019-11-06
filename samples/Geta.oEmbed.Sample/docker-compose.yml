@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     networks: 
       geta-oembed-network:
-        ipv4_address: 172.16.238.51
+        ipv4_address: 172.16.238.19
     depends_on:
      - geta-oembed-sample-db
     volumes: 
@@ -23,7 +23,7 @@ services:
       - ../Geta.oEmbed.Sample/App_Data:C:/data/
     networks: 
       geta-oembed-network:
-        ipv4_address: 172.16.238.52
+        ipv4_address: 172.16.238.20
 networks: 
   geta-oembed-network:
     ipam:
