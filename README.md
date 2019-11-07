@@ -69,3 +69,8 @@ https://github.com/m-kovacina
   1. Added support for Episerver 11
   2. Removed old dynamic content support
   3. Removed legacy custom property
+
+3.0.2.
+  1. Added the latest Alloy sample site into solution
+  2. oEmbed example added into sample site
+  3. Added Docker support
