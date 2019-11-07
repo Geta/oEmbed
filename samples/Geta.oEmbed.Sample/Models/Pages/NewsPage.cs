@@ -3,6 +3,7 @@ using EPiServer.DataAbstraction;
 using EPiServer.Filters;
 using EPiServer.Framework.Localization;
 using EPiServer.ServiceLocation;
+using Geta.oEmbed.Block;
 using Geta.oEmbed.Sample.Business;
 using Geta.oEmbed.Sample.Models.Blocks;
 
@@ -19,6 +20,8 @@ namespace Geta.oEmbed.Sample.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 305)]
         public virtual PageListBlock NewsList { get; set; }
+
+        public virtual oEmbedBlock EmbedBlock { get; set; }
 
         public override void SetDefaultValues(ContentType contentType)
         {

@@ -1,3 +1,4 @@
+@using Geta.oEmbed.Extensions
 @using Geta.oEmbed.Sample
 @model PageViewModel<NewsPage>
 
@@ -10,5 +11,6 @@
         @Html.DisplayFor(m => m.CurrentPage.MainBody)
     </div>
 </div>
+@Html.oEmbed(Model.CurrentPage.EmbedBlock)
 @Html.PropertyFor(x => x.CurrentPage.NewsList)
 @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row", Tag = Global.ContentAreaTags.TwoThirdsWidth })
