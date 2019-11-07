@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  geta-oembed-sample-web:
+    image: ${DOCKER_REGISTRY-}geta-oembed-sample-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks: 
+      geta-oembed-network:
+        ipv4_address: 172.16.238.19
+    depends_on:
+     - geta-oembed-sample-db
+    volumes: 
+      - ../../Geta.oEmbed/:C:/data/
+  geta-oembed-sample-db:
+    image: microsoft/mssql-server-windows-developer:1709
+    environment:
+     - ACCEPT_EULA=Y
+     - sa_password=T@gs19
+     - attach_dbs=[{'dbName':'EPiServerDB_56e8694d','dbFiles':['C:\\data\\EPiServerDB_56e8694d.mdf','C:\\data\\EPiServerDB_56e8694d_log.ldf']}]
+    volumes: 
+      - ../Geta.oEmbed.Sample/App_Data:C:/data/
+    networks: 
+      geta-oembed-network:
+        ipv4_address: 172.16.238.20
+networks: 
+  geta-oembed-network:
+    ipam:
+      driver: default
+      config:
+         - subnet: '172.16.238.0/24'
+
