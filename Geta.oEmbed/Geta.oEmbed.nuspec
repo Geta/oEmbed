@@ -10,6 +10,7 @@
     <description>$description$</description>
     <tags>EPiServer YouTube Vimeo Flickr Embed</tags>
     <iconUrl>http://cdn.geta.no/opensource/icons/geta-embed-icon.png</iconUrl>
+    <repository type="git" url="URL" branch="BRANCH_NAME" commit="COMMIT" />
     <dependencies>
       <dependency id="EPiServer.CMS.Core" version="[11.1.0, 12)" />
     </dependencies>
