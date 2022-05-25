@@ -82,7 +82,7 @@ namespace Geta.oEmbed
 
         private static string BuildUrl(oEmbedOptions options)
         {
-            var endpoint = "http://api.embed.ly/1/oembed";
+            var endpoint = "https://api.embed.ly/1/oembed";
 
             if (options.MaxWidth > 0)
                 endpoint = UriSupport.AddQueryString(endpoint, "maxwidth", options.MaxWidth.ToString(CultureInfo.InvariantCulture));
